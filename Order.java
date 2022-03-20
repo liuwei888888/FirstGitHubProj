@@ -7,11 +7,11 @@ public class Order {
 		
 		//用户数据存储
 		String[] names = new String[6];             //用户姓名
-		String[] dishMegs = new String[6];			//订单菜品及份数
-		int[] times = new int[6];					//送餐时间
-		String[] addresses = new String[6];			//送餐地址
-		int[] states = new int[6];				    //订单状态
-		double[] sumPrices = new double[6];			//保存订单总金额
+		String[] dishMegs = new String[6];	    //订单菜品及份数
+		int[] times = new int[6];		    //送餐时间
+		String[] addresses = new String[6];	    //送餐地址
+		int[] states = new int[6];		    //订单状态
+		double[] sumPrices = new double[6];	    //保存订单总金额
 		
 		//初始化一组用户数据作为检查
 		names[0] = "张三";
@@ -27,11 +27,12 @@ public class Order {
 		int[] count = new int[] {0,1,0};
 		
 		boolean flag = true;                            //系统状态
-		int selectNum = 0;								//用户选择
-		int userFlag = -1;								//系统状态
+		int selectNum = 0;				//用户选择
+		int userFlag = -1;				//系统循环条件
 		
 		
-		System.out.println("欢迎使用“吃货联盟订餐系统”");
+		System.out.println("欢迎使用“XXXX订餐系统”");
+		
 		//do-while框架
 		do {
 			System.out.println("************************");
@@ -56,7 +57,7 @@ public class Order {
 				case 1:
 					System.out.println("************************");
 					System.out.println("***我要订餐***");
-					int isFlag = -1;                                //标记订单是否创建
+					int isFlag = -1;                                //标记订单是否创建,默认-1表示没创建
 					for(int i = 0; i < names.length;i++) {
 						if(names[i] == null) {
 							System.out.print("请输入点餐人姓名：");
@@ -97,7 +98,7 @@ public class Order {
 							}
 							System.out.println("您订的是：" + dishMegs[i]);
 							System.out.println("送餐时间是:" + times[i] + "点");
-							isFlag = 0;
+							isFlag = 0;                              //订单创建成功
 							break;
 						}
 						if(isFlag == -1) {
@@ -177,7 +178,7 @@ public class Order {
 				case 6:
 					System.out.println("***退出系统***");
 					System.out.println("感谢使用，再见！");
-					flag = false;
+					flag = false;                            // 系统状态改变，退出系统
 					break;
 					
 			}
