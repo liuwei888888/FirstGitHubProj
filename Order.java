@@ -6,12 +6,12 @@ public class Order {
 		Scanner input = new Scanner(System.in);
 		
 		//用户数据存储
-		String[] names = new String[6];                 //用户姓名
-		String[] dishMegs = new String[6];				//订单菜品及份数
-		int[] times = new int[6];						//送餐时间
-		String[] addresses = new String[6];			    //送餐地址		
-		int[] states = new int[6];						//订单状态
-		double[] sumPrices = new double[6];				//保存订单总金额
+		String[] names = new String[6];             //用户姓名
+		String[] dishMegs = new String[6];			//订单菜品及份数
+		int[] times = new int[6];					//送餐时间
+		String[] addresses = new String[6];			//送餐地址
+		int[] states = new int[6];				    //订单状态
+		double[] sumPrices = new double[6];			//保存订单总金额
 		
 		//初始化一组用户数据作为检查
 		names[0] = "张三";
@@ -28,7 +28,7 @@ public class Order {
 		
 		boolean flag = true;                            //系统状态
 		int selectNum = 0;								//用户选择
-		int userFlag = -1;
+		int userFlag = -1;								//系统状态
 		
 		
 		System.out.println("欢迎使用“吃货联盟订餐系统”");
